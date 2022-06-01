@@ -17,3 +17,7 @@ The model identifies individuals by creating a vector embedding for each image, 
 By trying to reduce the angle between embedded vectors of images of the same individuals, embeddings of the same individuals are grouped tightly, and embeddings of different individuals are cleanly separated. 
 
 ![arcfaceloss](https://user-images.githubusercontent.com/33522459/164778056-9dcd3f6d-03f6-4374-a17a-ac8687b81c4a.png)
+
+# K-Nearest Neighbors
+
+A K-Nearest Neighbors model is trained using the vector embeddings pproduced from the neural network to identify groups formed by these vectors based on the number of other vectors closest to it. When a new picture of an individual is passed through the neural network, the vector embedding output is inputted into the KNN model and will find which group this individual belongs to.
